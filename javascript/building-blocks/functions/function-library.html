@@ -20,14 +20,14 @@
     const para = document.querySelector('p');
     
     function squared(num) {
-      return num**2;
+      return num * num;
     }
 
     function cubed(num) {
-      return num**3;
+      return num * num * num;
     }
 
-    return factorial(num) {
+   function factorial(num) {
       if (num < 0) return undefined;
       if (num == 0) return 1;
       let x = num - 1;
@@ -38,6 +38,8 @@
       return num;
     }
 
+    document.querySelector('p').textContent = 'wtf.';
+
     input.addEventListener('change', () => {
       const num = parseFloat(input.value);
       if (isNaN(num)) {
@@ -45,7 +47,7 @@
       } else {
         para.textContent = `${num} squared is ${squared(num)}. `;
         para.textContent += `${num} cubed is ${cubed(num)}. `;
-        para.textContent += `${num} factorial is ${factorial(num)}. `;
+        //para.textContent += `${num} factorial is ${factorial(num)}. `;
       }
     });
   </script>
