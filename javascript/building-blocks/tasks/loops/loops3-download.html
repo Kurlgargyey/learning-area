@@ -35,13 +35,25 @@
           return false;
         }
       }
-
+      if (num <=1) {
+        return false;
+      }
       return true;
     }
 
 
     // Add your code here
-
+    while(i>=0) {
+      switch (isPrime(i)) {
+        case true:
+          para.textContent += `${i} `
+          i--
+          break;
+        case false:
+          i--
+          continue
+      }
+    }
 
     // Don't edit the code below here!
     const section = document.querySelector('section');
